@@ -16,7 +16,9 @@ const MarketingApp = () => {
                 }
             }
         });
-        history.listen(onParentNavigation);
+        if(onParentNavigation) {
+            history.listen(onParentNavigation);
+        }
     }, []);
 
     return (
